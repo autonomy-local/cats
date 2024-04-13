@@ -7,19 +7,23 @@ export const routes: Routes = [
     component: TabsPage,
     children: [
       {
-        path: 'tab1',
+        path: 'supporters',
         loadComponent: () =>
-          import('../tab1/tab1.page').then((m) => m.Tab1Page),
+          import('../supporters/supporters.page').then(
+            (m) => m.SupportersPage
+          ),
       },
       {
-        path: 'tab2',
+        path: 'cats',
         loadComponent: () =>
-          import('../tab2/tab2.page').then((m) => m.Tab2Page),
+          import('../cats/cats.page').then((m) => m.CatsPage),
       },
       {
-        path: 'tab3',
+        path: 'informations',
         loadComponent: () =>
-          import('../tab3/tab3.page').then((m) => m.Tab3Page),
+          import('../informations/informations.page').then(
+            (m) => m.InformationsPage
+          ),
       },
       {
         path: '',
