@@ -1,13 +1,18 @@
 <ion-header [translucent]="true">
   <ion-toolbar>
-    <ion-title>supporters</ion-title>
+    <ion-title>サポーター</ion-title>
   </ion-toolbar>
 </ion-header>
 
+<!-- ngForでカードアイテムを繰り返す -->
 <ion-content [fullscreen]="true">
-  <ion-header collapse="condense">
-    <ion-toolbar>
-      <ion-title size="large">supporters</ion-title>
-    </ion-toolbar>
-  </ion-header>
+  <ion-card *ngFor="let supporter of supporters">
+    <ion-card-header>
+      <ion-card-title>{{ supporter.name }}</ion-card-title>
+      <ion-card-subtitle>{{ supporter.area }}</ion-card-subtitle>
+    </ion-card-header>
+    <ion-card-content>
+      {{ supporter.description }}
+    </ion-card-content>
+  </ion-card>
 </ion-content>
