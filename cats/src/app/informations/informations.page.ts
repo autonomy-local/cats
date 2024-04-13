@@ -31,6 +31,12 @@ export class InformationsPage implements OnInit {
       date: '2025/04/05',
       description: '猫の飼い方セミナーを開催します。市民センターにて。',
       color: 'success',
+    },
+    {
+      title: 'サイトからのお知らせ',
+      date: '2026/04/01',
+      description: 'このサイトの掲載情報はすべてサンプルです。必要な情報は各自で管理アカウントでログインして追加してください。',
+      color: 'warning',
     }
   ]
 
