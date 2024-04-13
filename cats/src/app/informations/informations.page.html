@@ -1,13 +1,20 @@
 <ion-header [translucent]="true">
   <ion-toolbar>
-    <ion-title>informations</ion-title>
+    <ion-title>お知らせ</ion-title>
   </ion-toolbar>
 </ion-header>
 
 <ion-content [fullscreen]="true">
-  <ion-header collapse="condense">
-    <ion-toolbar>
-      <ion-title size="large">informations</ion-title>
-    </ion-toolbar>
-  </ion-header>
+  <ion-card
+    *ngFor="let information of informations"
+    color="{{ information.color }}"
+  >
+    <ion-card-header>
+      <ion-card-title>{{ information.title }}</ion-card-title>
+      <ion-card-subtitle>{{ information.date }}</ion-card-subtitle>
+    </ion-card-header>
+    <ion-card-content>
+      {{ information.description }}
+    </ion-card-content>
+  </ion-card>
 </ion-content>
